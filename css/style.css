@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 100%;
     list-style: none;
     text-decoration: none;
 }
@@ -15,19 +14,23 @@ body{
     font-family: 'Fredoka One';
     
 }
-.container{
-    display: grid;
-    grid-column: 20% 60% 20%;
-    grid-row: 400px auto 400px;
-    grid-template-areas: "area1 area1 area1"
-                         "area2 area3 area4"
-                         "area2 area3 area4";
+.container{ /* Hecho con el generador de grid */
+    display: grid; 
+    grid-template-columns: 1fr 3fr 3fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "header header header header"
+        "ejercicio1 ejercicio2 ejercicio2 ejercicio8"
+        "ejercicio1 ejercicio4 ejercicio4 ejercicio8"
+        "ejercicio1 ejercicio7 ejercicio6 ejercicio8"
 }
+/* Cabecera */
 .cabecera{
     text-align: center;
     color: white;
     margin-top: 1em;
-    grid-area: area1;
+    grid-area: header;
     font-weight: bold;
 }
 .cabecera img{
@@ -38,10 +41,14 @@ body{
     width: 250px;
     height: 70px;
 }
+/* Cabecera */
+ /* Ejercicio 1 */
 
 .ejercicio1{
-    grid-area: area2;
+    grid-area: ejercicio1;
     color: white;
+    text-align: center;
+    border-left:1px solid white;
 }
 .ejercicio1 h2{
     width: 200px;
@@ -49,8 +56,319 @@ body{
     border-radius: 2px;
 }
 .ejercicio1 li{
-    width: 200px;
     background-color: gray;
     border: 1px solid white;
     border-radius: 2px;
+    width: 200px;
 }
+.ejercicio1 li a{
+    color: white;
+}
+
+/* Ejercicio 1 */
+
+/* Ejercicio 2 */
+.ejercicio2{
+    width: 100%;
+    grid-area: ejercicio2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 2px 2px 2px gray;
+    border: 2px solid gray; 
+    margin-left: 1em;
+}
+.ejercicio2 .card2{
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.ejercicio2 h3{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: gray;
+    margin: 2em;
+}
+.ejercicio2 img{
+    width: 100px;
+    height: 100px;
+    opacity: 30%;
+
+}
+.ejercicio2 p{
+    position: absolute;
+    margin-top: 8em;
+}
+/* Ejercicio 2 */
+
+/* Ejercicio 3 */
+.ejercicio2 .card3{
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1em;
+}
+.ejercicio2 .imagen3{
+    opacity: 100%;
+}
+
+/* Ejercicio 3 */
+
+/* Ejercicio 4 */
+.ejercicio4{
+    width: 100%;
+    margin-top: 1em;
+    grid-area: ejercicio4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    margin-left: 1em;
+
+}
+.ejercicio4 h2{
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    background-color: gray;
+    padding: .3em 1em;
+    width: 98%;
+    margin-bottom: 1em;
+}
+.ejercicio4 p{ 
+    column-count: 2;
+    column-rule: 2px solid fuchsia;
+    margin: 0 1em;
+}
+/* Ejercicio 4 */
+
+/* Ejercicio 5 */
+.ejercicio2 .card5{
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+}
+.ejercicio2 .ejercicio5{
+    font-size: 12px;
+    width: 100%;
+    height: 50%;
+    border: dotted 1px black; /* https://www.html6.es/t17_columnas.html */
+    margin: 1em 0;
+}
+.ejercicio2 #card5{
+    justify-content: center;
+}
+.ejercicio2 .ejercicio5 th{
+    border: 1px solid black;
+}
+.ejercicio2 .texto_vertical{
+    
+    background-color: black;
+    background-size: cover;
+    color: white;
+}
+.ejercicio2 .texto_vertical div{
+    transform: rotate(90deg);
+}
+.ejercicio2 .resultado{
+    height: 20%;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+.ejercicio2 .ejercicio5 ol li{
+    border: 1px solid black;
+    display: none;
+}
+.ejercicio2 .ejercicio5 ol:hover li{
+    display: block;
+}
+/* Ejercicio 5 */
+
+/* Ejercicio 6 */
+.ejercicio6{
+    margin-top: 1em;
+    grid-area: ejercicio6;
+    border: 2px solid gray;
+    width: 50%;
+    height: 100%;
+    box-shadow: 2px 2px 2px gray;
+
+}
+.ejercicio6 form{
+    width: 50%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ejercicio6 fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+
+}
+.ejercicio6 legend{
+    margin: 0 1em;
+    color: yellow;
+    background-color: gray;
+
+}
+.ejercicio6 label{
+    color: blue;
+    margin: 1em 0;
+    justify-content: flex-start;
+}
+.ejercicio6 input{
+    width: 60%;
+    background-color: blue;
+    margin-bottom: 1em;
+}
+.ejercicio6 .botón{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 1em;
+}
+
+.ejercicio6 .botón input{
+    background-color: chocolate;
+    padding: .3em .3em;
+}
+
+/* Ejercicio 6 */
+
+/* Ejercicio 7 */
+.ejercicio7{
+    float: right;
+    grid-area: ejercicio7;
+    margin: 1em auto;
+    border: 2px solid gray;
+    width: 70%;
+    height: 100%;
+    box-shadow: 2px 2px 2px gray;
+
+}
+.ejercicio7 .card_ejercicio7{
+    width: 50%;
+    background-color: blueviolet;
+    border: 1px purple solid;
+    transform: rotate(25deg);
+    margin: 0 auto;
+    position: relative;
+    top: 2em;
+}
+.ejercicio7 h2{
+    text-align: center;
+    background-color: gray;
+    width: 70%;
+    margin: 1em auto 1em auto;
+}
+.ejercicio7 .line{
+    width: 70%;
+    border-bottom: 1px solid yellow;
+    transform: rotate(0);
+    margin: 1em auto;
+}
+.ejercicio7 li{
+    /* list-style-image sive para poner al la lista una imagen como estilo de lista */
+    text-align: center;
+    list-style-image: url(../img/carpeta.gif) /* https://developer.mozilla.org/es/docs/Web/CSS/list-style-image */
+}
+/* Ejercicio 7 */
+
+/* Ejercicio 8 */
+.ejercicio8{
+    grid-area: ejercicio8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 80px;
+    text-align: center;
+    background-color: bisque;
+    margin: 0 auto;
+    border-radius: 2em;
+    animation: ejercicio8 10s infinite;
+}
+@keyframes ejercicio8{
+    0%{
+        transform: translateY(0);
+        box-shadow: 4px 4px 2px black;
+        background-color: bisque;
+    }
+    50%{
+        transform: translateY(50px);
+        box-shadow: -4px -4px 2px black;
+        background-color: aqua;
+    }
+    100%{
+        transform: translateY(0);
+        box-shadow: 4px 4px 2px black;
+        background-color: bisque;
+    }
+}
+
+/* Ejercicio 8 */
+
+footer{
+    margin-top: 10em;
+    text-align: center;
+    color: white;
+}
+footer p:hover{
+    animation: footer infinite 1s;
+}
+@keyframes footer {
+    0%{
+        color: white;
+    }
+    20%{
+        color: aqua;
+        text-shadow: 2px 2px 2px black;
+    }
+    40%{
+        color: blueviolet;
+        text-shadow: -2px 2px 2px black;
+
+    }
+    70%{
+        color: brown;
+        text-shadow: -2px -2px 2px black;
+
+    }
+    100%{
+        color: white;
+        text-shadow: 2px -2px 2px black;
+    }
+}
+
+
+
+
+
+
