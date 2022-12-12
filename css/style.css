@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background: linear-gradient(180deg, rgb(0, 0, 143)60%, rgb(88, 137, 241) 90%) no-repeat;
+    background-size: cover;
+    font-family: 'Fredoka One';
+    
+}
+.container{
+    display: grid;
+    grid-column: 20% 60% 20%;
+    grid-row: 400px auto 400px;
+    grid-template-areas: "area1 area1 area1"
+                         "area2 area3 area4"
+                         "area2 area3 area4";
+}
+.cabecera{
+    text-align: center;
+    color: white;
+    margin-top: 1em;
+    grid-area: area1;
+    font-weight: bold;
+}
+.cabecera img{
+    border: 1px solid white;
+    position: relative;
+    right: 1em;
+    float: right;
+    width: 250px;
+    height: 70px;
+}
+
+.ejercicio1{
+    grid-area: area2;
+    color: white;
+}
+.ejercicio1 h2{
+    width: 200px;
+    background-color: gray;
+    border-radius: 2px;
+}
+.ejercicio1 li{
+    width: 200px;
+    background-color: gray;
+    border: 1px solid white;
+    border-radius: 2px;
+}
